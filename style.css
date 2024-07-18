@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e2a7d8;
+  overflow-y: hidden;
+  font-family: 'Playwrite HR Lijeva', cursive;
+  transition: .3s ease-out;
+}
+
+.hidden {
+  opacity: 0;
+  transition: .3s ease-in;
+  position: absolute;
+  left: -999px;
+  z-index: -1;
+}
+
+.content {
+  text-align: center;
+  transition: .3s ease-out;
+}
+
+.heart {
+  animation: heartbeat 5s infinite;
+}
+
+.svg {
+  width: 40vw;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: scale(1.2) rotate(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(0);
+  }
+}
